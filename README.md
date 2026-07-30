@@ -1,4 +1,4 @@
-# faisalprasetya.github.io
+# Professional Profile - Faisal Prasetya
 
 Personal portfolio site for Faisal Malik Widya Prasetya - Senior Data & AI Engineer.
 
@@ -20,11 +20,3 @@ assets/favicon.svg   Site icon
 robots.txt
 sitemap.xml
 ```
-
-## Local preview
-
-```
-python3 -m http.server 8000
-```
-
-Then open http://localhost:8000

@@ -345,6 +345,31 @@ a { color: var(--accent); }
   background: var(--bg);
 }
 
+.tag-list-icons {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.tag-list-icons li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.88rem;
+  padding: 9px 12px;
+}
+
+.tag-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* ---------- Fit (roles / industries) ---------- */
 .fit-grid {
   display: grid;

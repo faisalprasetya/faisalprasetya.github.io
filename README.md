@@ -1,6 +1,6 @@
 # faisalprasetya.github.io
 
-Personal portfolio site for Faisal Malik Widya Prasetya — Senior Data & AI Engineer.
+Personal portfolio site for Faisal Malik Widya Prasetya - Senior Data & AI Engineer.
 
 Live at: https://faisalprasetya.github.io/
 
@@ -28,8 +28,3 @@ python3 -m http.server 8000
 ```
 
 Then open http://localhost:8000
-
-## Updating content
-
-Source of truth for résumé content is `Profile.md`. When it changes, update the
-corresponding section in `index.html` by hand (no templating/build step).

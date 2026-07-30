@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Node Not Found</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/css/style.css">
+<script>
+  (function () {
+    var stored = localStorage.getItem("theme");
+    var theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<style>
+  .notfound { min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 24px; }
+  .notfound h1 { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 1.4rem; color: var(--accent-2); margin-bottom: 12px; }
+  .notfound p { color: var(--text-muted); margin-bottom: 24px; }
+</style>
+</head>
+<body>
+  <div class="notfound">
+    <h1>404: node unreachable</h1>
+    <p>This edge doesn't connect to anything. The graph has no path here.</p>
+    <a class="btn btn-primary" href="/">Return to graph root</a>
+  </div>
+</body>
+</html>

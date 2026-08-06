@@ -1,6 +1,6 @@
 # Professional Profile - Faisal Prasetya
 
-Personal portfolio site for Faisal Malik Widya Prasetya - Senior Data & AI Engineer.
+Personal portfolio site for Faisal Malik Widya Prasetya - Senior AI & Data Engineer.
 
 Live at: https://faisalprasetya.github.io/
 

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pitch for Lazyweb - Faisal Prasetya</title>
+<meta name="description" content="Interview brief: how Faisal Prasetya would lead Lazyweb's data engine, treatment logic, and mobile SDK ecosystem as the first technical hire.">
+<meta name="theme-color" content="#0f1420">
+<link rel="canonical" href="https://faisalprasetya.github.io/lazyweb/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pitch for Lazyweb - Faisal Prasetya">
+<meta property="og:description" content="A working plan for Lazyweb's data engine and SDK ecosystem, and why I am the right first engineer to own it.">
+<meta property="og:url" content="https://faisalprasetya.github.io/lazyweb/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pitch for Lazyweb - Faisal Prasetya">
+<meta name="twitter:description" content="A working plan for Lazyweb's data engine and SDK ecosystem, and why I am the right first engineer to own it.">
+
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/lazyweb.css">
+
+<script>
+  (function () {
+    var stored = localStorage.getItem("theme");
+    var theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-node" aria-hidden="true"></span>
+      <span class="brand-text">Faisal Prasetya</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#brief">Brief</a>
+      <a href="#fit">Why me</a>
+      <a href="#plan">90-day plan</a>
+      <a href="#system">System</a>
+      <a href="#proof">Proof</a>
+      <a href="#working">Working style</a>
+      <a href="#close">Close</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+      <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section id="top" class="hero pitch-hero">
+    <div class="hero-graph" aria-hidden="true">
+      <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+        <g class="graph-lines">
+          <line x1="120" y1="90" x2="320" y2="180"/>
+          <line x1="320" y1="180" x2="560" y2="110"/>
+          <line x1="320" y1="180" x2="260" y2="360"/>
+          <line x1="260" y1="360" x2="480" y2="410"/>
+          <line x1="480" y1="410" x2="650" y2="300"/>
+          <line x1="560" y1="110" x2="650" y2="300"/>
+          <line x1="120" y1="90" x2="260" y2="360"/>
+          <line x1="650" y1="300" x2="720" y2="130"/>
+        </g>
+        <g class="graph-nodes">
+          <circle cx="120" cy="90" r="6"/>
+          <circle cx="320" cy="180" r="8"/>
+          <circle cx="560" cy="110" r="5"/>
+          <circle cx="260" cy="360" r="6"/>
+          <circle cx="480" cy="410" r="5"/>
+          <circle cx="650" cy="300" r="7"/>
+          <circle cx="720" cy="130" r="4"/>
+        </g>
+      </svg>
+    </div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow"><span class="node-dot"></span>interview brief · first technical hire</p>
+      <h1>A plan for Lazyweb's data engine and SDK ecosystem</h1>
+      <p class="hero-role">Faisal Malik Widya Prasetya · Senior AI &amp; ML Platform Engineer</p>
+      <div class="pitch-meta">
+        <span class="chip">Backend + data</span>
+        <span class="chip">Experimentation hygiene</span>
+        <span class="chip">MCP / TypeScript / Python</span>
+        <span class="chip">Mobile SDK contract</span>
+      </div>
+      <p class="hero-summary">
+        Lazyweb already teaches agents how the best products grow. The next constraint is
+        infrastructure: a data engine that treats experimentation as a product, and SDKs that let
+        mobile apps participate — assignment, exposure, and measurement — without breaking the
+        experience. I have spent 7+ years building that class of system, including sitting on the
+        receiving end of a production mobile SDK. This page is the plan I would execute as your
+        first engineer.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#plan">Walk the 90-day plan</a>
+        <a class="btn btn-ghost" href="#fit">Why I am the hire</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat-value">7+ yrs</span>
+          <span class="stat-label">Backend, data, and ML platforms</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">0 → 1</span>
+          <span class="stat-label">Platforms owned from a blank page</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">SDK-side</span>
+          <span class="stat-label">Ingested events from a live mobile SDK</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">ET overlap</span>
+          <span class="stat-label">Jakarta evenings = US morning core hours</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="brief" class="section">
+    <div class="wrap">
+      <h2><span class="node-dot"></span>How I read the brief</h2>
+      <p class="section-lede">
+        I am not pitching a generic backend resume. I read Lazyweb as two loops that should share
+        one contract: a research loop that already exists, and a runtime loop that the first engineer
+        is being hired to industrialize.
+      </p>
+      <div class="read-grid">
+        <article class="skill-card read-card">
+          <h3>The company, as I understand it</h3>
+          <p>
+            An AI-native growth and experimentation company: an opinionated layer on open-source
+            experimentation tooling, plus proprietary pipelines, reporting, and workflow logic.
+            Today that shows up as TypeScript and Python SDKs, an MCP server, and a companion web app.
+            The customer center of gravity is mobile. The public surface — screens, flows, and
+            experiment evidence served to agents — only works if the data underneath is trustworthy.
+          </p>
+          <p>
+            That matches what Ali has practiced for years at Duolingo: experiment hygiene is not a
+            slide. It is the product. A first engineer who treats assignment, exposure, and reporting
+            as one system will compound faster than someone who only ships SDK wrappers.
+          </p>
+        </article>
+        <article class="skill-card read-card">
+          <h3>What the first hire actually owns</h3>
+          <ul>
+            <li>Extend the backend that assignment, targeting, and config already live on.</li>
+            <li>Design the SDK contract, then ship mobile clients (iOS, Android, React Native / Flutter) against it.</li>
+            <li>Own treatment logic, statistical reporting, and the pipelines that make both honest.</li>
+            <li>Integrate third-party and open-source experimentation tools instead of rebuilding the universe.</li>
+            <li>Make architecture calls with the founding team, in writing, at early-stage speed.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="principles" class="section section-alt">
+    <div class="wrap">
+      <h2><span class="node-dot"></span>How I would operate</h2>
+      <div class="principles">
+        <article class="principle">
+          <span class="principle-num">01</span>
+          <h3>Hygiene over features</h3>
+          <p>A wrong assignment log is worse than a missing chart. Guardrails ship with the pipeline, not after the first bad call.</p>
+        </article>
+        <article class="principle">
+          <span class="principle-num">02</span>
+          <h3>One contract, many SDKs</h3>
+          <p>Python and TypeScript stay the reference. Mobile clients implement the same spec — types, retries, sticky bucketing, versioned events.</p>
+        </article>
+        <article class="principle">
+          <span class="principle-num">03</span>
+          <h3>Warehouse before streams</h3>
+          <p>At this stage, correct ELT and a metric tree beat a premature event bus. Introduce streaming when latency actually demands it.</p>
+        </article>
+        <article class="principle">
+          <span class="principle-num">04</span>
+          <h3>Fail safe on the client</h3>
+          <p>Mobile networks lie. SDKs cache assignment, batch exposures, and never block the UI on a stats round-trip.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="fit" class="section">
+    <div class="wrap">
+      <h2><span class="node-dot"></span>Why I am the most suitable hire</h2>
+      <p class="section-lede">
+        The role asks for a backend and data engineer who can also design SDKs and speak
+        experimentation. That is the through-line of my career — not a stretch narrative.
+      </p>
+      <div class="fit-wrap">
+      <table class="fit-table">
+        <thead>
+          <tr>
+            <th>What you need</th>
+            <th>What I have already done</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fit-need">Python and TypeScript backends</td>
+            <td class="fit-proof">Daily languages. At US Biolab I shipped Pathbox AI on <strong>TypeScript / Bun / ElysiaJS</strong>, with serverless async workflows on AWS. Python is the default across data, MLOps, and API work (FastAPI, Spark, Airflow).</td>
+          </tr>
+          <tr>
+            <td class="fit-need">Data engineering and pipelines</td>
+            <td class="fit-proof">7+ years of batch and streaming ETL/ELT on <strong>Airflow, Spark/PySpark, Databricks, BigQuery, Kafka, Kinesis, Dataflow</strong>. I have led a data engineering team and stood up 0→1 warehouses on AWS and GCP.</td>
+          </tr>
+          <tr>
+            <td class="fit-need">Experimentation, analytics, treatment</td>
+            <td class="fit-proof">I have built developer-facing experiment and training loops (GitHub Actions → Vertex AI / EC2), metric and reporting models in dbt/BigQuery, and research-grade statistical work (regime models, transfer entropy). I know why <strong>assignment ≠ exposure</strong>, and why SRM belongs in the pipeline.</td>
+          </tr>
+          <tr>
+            <td class="fit-need">APIs and SDKs</td>
+            <td class="fit-proof">I have authored and maintained production <strong>TypeScript and Python client libraries</strong>: typed surfaces, modular packages, retries, and error contracts. The mobile SDK job is that discipline applied to a smaller runtime, not a different profession.</td>
+          </tr>
+          <tr>
+            <td class="fit-need">Mobile ecosystems</td>
+            <td class="fit-proof">I am not a staff iOS/Android UI engineer, and I will not pretend otherwise. I <strong>have</strong> operated the data plane behind a company mobile SDK: at Quadrant I ingested consented location events from the SDK over Kinesis/MSK and made them analytically true. Foundational Swift, Kotlin, and React Native is enough to ship the integration layer; native chrome is not this role.</td>
+          </tr>
+          <tr>
+            <td class="fit-need">MCP, APIs, third-party tools</td>
+            <td class="fit-proof">I have built developer-facing SDKs, CI/CD, and MCP-backed workflows. Integrating open-source experimentation platforms and third-party APIs is the same muscle as Airbyte connectors, GraphQL indexers, and partner APIs I have shipped before.</td>
+          </tr>
+          <tr>
+            <td class="fit-need">Early-stage, high ownership</td>
+            <td class="fit-proof">Pintu, Hivello, Pathbox, and stealth 0→1 systems. I am used to writing the RFC, implementing it, and being on the hook when it is wrong. Frontend is not a core requirement here — I will not get lost in it.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="plan" class="section section-alt">
+    <div class="wrap">
+      <h2><span class="node-dot"></span>90-day plan</h2>
+      <p class="section-lede">
+        A first hire should create leverage, not a rewrite. I would keep the current TypeScript and
+        Python SDKs as the source of truth, make the data honest, then grow mobile clients off one
+        spec. Dates assume we pick the first mobile target from the actual customer mix in week one.
+      </p>
+      <div class="plan-grid">
+        <article class="plan-card">
+          <p class="plan-phase">Days 1 – 30 · absorb and stabilize</p>
+          <h3>Make the current system legible</h3>
+          <ul>
+            <li>Map MCP, web app, TS/Python SDKs, and the open-source experimentation core. Write a short architecture note, not a wiki novel.</li>
+            <li>Inventory the event taxonomy. Separate assignment, exposure, and conversion. Find where they currently collapse into one blob.</li>
+            <li>Stand up warehouse models for experiment reporting on whatever is already there (BigQuery or equivalent).</li>
+            <li>Ship one user-visible reliability fix in production so I am in the loop before I propose bigger moves.</li>
+          </ul>
+          <p class="plan-outcome"><strong>Exit:</strong> a shared RFC, a metric tree, and a backlog the founders can argue with.</p>
+        </article>
+        <article class="plan-card">
+          <p class="plan-phase">Days 31 – 60 · contract and first mobile SDK</p>
+          <h3>Lock the spec, then ship a client</h3>
+          <ul>
+            <li>Publish a language-agnostic SDK contract (OpenAPI or equivalent): init, assignment, exposure, config refresh, identity.</li>
+            <li>Add contract tests against the existing TypeScript SDK so mobile cannot drift.</li>
+            <li>Ship the first mobile SDK — React Native if that covers most customers, native iOS if it does not. Thin. Documented. Versioned.</li>
+            <li>Client behavior: sticky bucketing, local cache, request timeouts, batched events, fail-open vs fail-closed made explicit per flag type.</li>
+          </ul>
+          <p class="plan-outcome"><strong>Exit:</strong> one mobile app can assign, emit, and show up in a report.</p>
+        </article>
+        <article class="plan-card">
+          <p class="plan-phase">Days 61 – 90 · reporting that can be trusted</p>
+          <h3>Close the loop to the agent surface</h3>
+          <ul>
+            <li>Automated experiment reporting: lift, intervals, sample-ratio mismatch, and guardrail metrics.</li>
+            <li>Wire those results into MCP tools and the web app so agents and humans see the same numbers.</li>
+            <li>Data-quality monitors on volume, schema drift, and identity joins — the boring work that keeps hygiene real.</li>
+            <li>Playbook for Android / Flutter as copies of the same contract, not new designs.</li>
+          </ul>
+          <p class="plan-outcome"><strong>Exit:</strong> a repeatable path from SDK event to a decision, without a founder in the SQL.</p>
+        </article>
+      </div>
+      <div class="week-one">
+        <h3>Week one, specifically</h3>
+        <p>
+          I would not start by rewriting the stack. I would pair on a live customer or internal
+          integration, read the assignment path end to end, and leave with three artifacts: the
+          current event dictionary, the first mobile target, and a list of “this will lie to us”
+          issues ranked by blast radius. Founders should feel progress in the first seven days, not
+          just a discovery deck.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="system" class="section">
+    <div class="wrap">
+      <h2><span class="node-dot"></span>System I would grow toward</h2>
+      <p class="section-lede">
+        Working hypothesis, not a demand that we rebuild on day one. The open-source experimentation
+        core stays. Proprietary value lives in treatment policy, the event contract, the warehouse,
+        and the SDK experience.
+      </p>
+      <div class="arch">
+        <div class="arch-row arch-row-1">
+          <div class="arch-box">
+            <span class="arch-kicker">clients</span>
+            <h3>Web, Python, iOS, Android, React Native / Flutter</h3>
+            <p>Same contract: init, targeting attributes, getTreatment, trackExposure, flush. Local assignment cache. No UI work required from this role.</p>
+          </div>
+        </div>
+        <div class="arch-flow" aria-hidden="true">↓</div>
+        <div class="arch-row">
+          <div class="arch-box">
+            <span class="arch-kicker">edge</span>
+            <h3>API + MCP gateway</h3>
+            <p>Auth, rate limits, config payloads, agent tools. TypeScript/Python SDKs already prove this surface; mobile reuses it.</p>
+          </div>
+          <div class="arch-box">
+            <span class="arch-kicker">control plane</span>
+            <h3>Experimentation core</h3>
+            <p>Open-source assignment + targeting, extended with Lazyweb policy: holdouts, namespaces, and the hygiene rules the product is opinionated about.</p>
+          </div>
+          <div class="arch-box">
+            <span class="arch-kicker">policy</span>
+            <h3>Treatment logic</h3>
+            <p>Deterministic hashing, sticky buckets, overrides. Assignment is logged as a first-class event, never inferred later from a screenshot.</p>
+          </div>
+        </div>
+        <div class="arch-flow" aria-hidden="true">↓</div>
+        <div class="arch-row">
+          <div class="arch-box">
+            <span class="arch-kicker">data engine</span>
+            <h3>Bronze → silver → gold</h3>
+            <p>Raw SDK payloads, identity resolution, then experiment-ready tables: assignments, exposures, conversions, guardrails.</p>
+          </div>
+          <div class="arch-box">
+            <span class="arch-kicker">stats</span>
+            <h3>Reporting jobs</h3>
+            <p>Frequentist or sequential, but always with SRM, exposure windows, and a metric tree. Humans and MCP tools query the same gold tables.</p>
+          </div>
+          <div class="arch-box">
+            <span class="arch-kicker">product</span>
+            <h3>Web app + agent skills</h3>
+            <p>The existing research library stays. Runtime results join it so “what winners look like” and “what we just shipped” are one system.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sdk-grid">
+        <article class="skill-card">
+          <h3>SDK design I would not compromise on</h3>
+          <ul class="sdk-list">
+            <li>
+              <strong>Spec first</strong>
+              <span>OpenAPI (or proto) generated types. Python and TypeScript remain the reference implementations the contract tests run against.</span>
+            </li>
+            <li>
+              <strong>Tiny mobile footprint</strong>
+              <span>No analytics kitchen sink. Assignment + config + batched events. Battery and privacy constraints are part of the design, not a later ticket.</span>
+            </li>
+            <li>
+              <strong>Identity that survives app restarts</strong>
+              <span>Anonymous ID, optional logged-in merge, and a written rule for what happens when those disagree — or reports will lie.</span>
+            </li>
+            <li>
+              <strong>Versioned payloads</strong>
+              <span>Schema evolution with additive fields. Old clients stay valid. That is how you ship iOS, then Android, without freezing the backend.</span>
+            </li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <h3>Tradeoffs I would bring to the table</h3>
+          <ul class="sdk-list">
+            <li>
+              <strong>RN vs native first</strong>
+              <span>Choose from the customer list, not from resume preference. One well-instrumented client beats three half SDKs.</span>
+            </li>
+            <li>
+              <strong>Warehouse-first vs stream-first</strong>
+              <span>Start with scheduled transforms unless assignment/config latency or volume forces a bus. I have built both; I will not fashion a Kafka cluster for its own sake.</span>
+            </li>
+            <li>
+              <strong>Extend OSS, do not fork it</strong>
+              <span>Proprietary logic belongs in pipelines, policy, and reporting. Forking the experimentation core is how a three-person company inherits a fourth product.</span>
+            </li>
+            <li>
+              <strong>Frontend stays out of scope</strong>
+              <span>I will consume the web app as a customer of the API. I will not quietly become the frontend owner.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof" class="section section-alt">
+    <div class="wrap">
+      <h2><span class="node-dot"></span>Proof, not adjacent experience</h2>
+      <p class="section-lede">
+        Four pieces of work that map onto this job without translation gymnastics.
+      </p>
+      <div class="proof-grid">
+        <article class="proof-card">
+          <h3>I have sat behind a mobile SDK</h3>
+          <p class="proof-org">Lead Data Engineer · Quadrant</p>
+          <p>
+            Architected real-time ingestion of consented location events emitted by the company
+            mobile SDK (Kinesis + MSK/Kafka), then Spark/Databricks and dbt/BigQuery models so
+            downstream analytics were not fiction. That is the unglamorous half of a mobile SDK:
+            if the payload, identity, or clock is wrong, every experiment report is theater.
+          </p>
+        </article>
+        <article class="proof-card">
+          <h3>I rewrite backends when latency is the product</h3>
+          <p class="proof-org">Senior Software Engineer · US Biolab / Pathbox AI</p>
+          <p>
+            Re-engineered the image pipeline in Rust, built the TypeScript/ElysiaJS backend, and
+            put inference on SQS/Lambda/ECS. Cut latency and cost on a path customers feel. Lazyweb
+            SDKs will have the same constraint: the experiment layer cannot add jank to a paywall
+            or an onboarding step.
+          </p>
+        </article>
+        <article class="proof-card">
+          <h3>I build platforms other people ship on</h3>
+          <p class="proof-org">Senior MLOps Engineer · Walleye Capital</p>
+          <p>
+            Kubeflow components, Vertex AI promotion paths, and internal interfaces so scientists
+            could train and evaluate without owning infra. That is the shape of an experimentation
+            platform: founders and agents should get a treatment and a report, not a warehouse
+            login.
+          </p>
+        </article>
+        <article class="proof-card">
+          <h3>I have been the first data/platform hire</h3>
+          <p class="proof-org">Pintu · Hivello · other 0→1 builds</p>
+          <p>
+            Stood up multi-cloud data platforms from nothing, including batch + streaming, warehouse
+            modeling, and self-serve reporting. I know the week-one temptation to over-architect,
+            and I have the scars from choosing boring on purpose.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="working" class="section">
+    <div class="wrap">
+      <h2><span class="node-dot"></span>How we would work</h2>
+      <div class="work-grid">
+        <article class="skill-card">
+          <h3>Operating cadence</h3>
+          <p class="section-lede work-copy">
+            Written RFCs before large swings. Something in production every week, even if it is
+            small. Async by default; overlap for architecture and customer-facing calls. I am in
+            Indonesia (UTC+7): 08:00–12:00 Eastern is 19:00–23:00 Jakarta, which covers the
+            four-hour requirement without pretending I am on the US east coast.
+          </p>
+        </article>
+        <article class="skill-card">
+          <h3>What I want from you</h3>
+          <ul class="plain-list">
+            <li>Access to the current architecture and one live integration in week one.</li>
+            <li>A named owner for product calls so SDK decisions are not guessed.</li>
+            <li>Permission to say no to a second mobile platform until the first one reports correctly.</li>
+            <li>Directness when a plan is wrong — I would rather rewrite a page than a quarter.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="questions" class="section section-alt">
+    <div class="wrap">
+      <h2><span class="node-dot"></span>What I want to learn in the interview</h2>
+      <p class="section-lede">
+        These are the decisions that would change the 90-day plan. I would rather get them from you
+        than invent a stack in isolation.
+      </p>
+      <ol class="q-list">
+        <li>
+          Which open-source experimentation core are we extending, and where have you already diverged from it?
+          <span>That tells me whether month one is “wrap and instrument” or “untangle a fork.”</span>
+        </li>
+        <li>
+          What share of design-partner volume is native iOS, Android, React Native, or Flutter?
+          <span>That picks the first SDK. I will not sequence this from a blog post.</span>
+        </li>
+        <li>
+          Where does assignment happen today — server, existing TS/Python SDK, or both — and what is the current event volume?
+          <span>That decides warehouse-first vs an event bus, and how strict the mobile cache needs to be.</span>
+        </li>
+        <li>
+          What is the definition of done for day 30: a cleaner research pipeline, a live customer experiment, or a mobile proof?
+          <span>I can do all three over 90 days. I will not pretend they are the same first month.</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="close" class="section contact-section">
+    <div class="wrap">
+      <h2><span class="node-dot"></span>The close</h2>
+      <p class="close-note">
+        You need a first engineer who can extend the backend, make experimentation data true, and
+        turn a TypeScript/Python SDK contract into mobile clients without turning the company into a
+        mobile studio. That is the work I have been doing: pipelines, APIs, client libraries, and
+        0→1 platforms in high-ownership rooms. I want to be the person who makes Lazyweb’s
+        opinionated hygiene real in the runtime path — so agents and growth teams are not just
+        reading other companies’ experiments, they are running their own without lying to themselves.
+      </p>
+      <div class="close-actions">
+        <a class="btn btn-primary" href="mailto:faisalmalikwidyaprasetya@gmail.com">faisalmalikwidyaprasetya@gmail.com</a>
+        <a class="btn btn-ghost" href="/">Full profile</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="year"></span> Faisal Malik Widya Prasetya · Prepared for the Lazyweb conversation</p>
+  </div>
+</footer>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>

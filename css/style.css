@@ -377,7 +377,8 @@ a { color: var(--accent); }
   border-radius: 6px;
 }
 
-:root[data-theme="light"] .skill-card .tag-list li {
+:root[data-theme="light"] .skill-card .tag-list li,
+:root[data-theme="light"] .lb-card .tag-list li {
   background: var(--bg);
 }
 
@@ -563,6 +564,106 @@ summary .dates {
   border-top: 1px dashed var(--panel-border);
   color: var(--text-muted);
   font-size: 0.92rem;
+}
+
+/* ---------- Leaderboards ---------- */
+.leaderboards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.lb-card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lb-card-top {
+  border-color: color-mix(in srgb, var(--accent-2) 55%, var(--panel-border));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-2) 35%, transparent), var(--shadow);
+}
+
+.lb-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lb-platform {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.lb-desc {
+  margin: 2px 0 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.lb-rank {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.lb-rank-value {
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  line-height: 1.1;
+}
+
+.lb-rank-label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+.lb-shot {
+  display: block;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.lb-shot img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.2s ease;
+}
+
+.lb-shot:hover img {
+  transform: scale(1.02);
+}
+
+.lb-stats {
+  gap: 6px;
+}
+
+.lb-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.lb-link:hover {
+  text-decoration: underline;
 }
 
 /* ---------- Research / Education ---------- */

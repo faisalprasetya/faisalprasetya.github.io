@@ -14,6 +14,7 @@ Served directly by GitHub Pages from the `main` branch root.
 ```
 index.html          Single-page site (About, Skills, Experience, Projects, Research, Contact)
 lazyweb/index.html   Interview pitch for Lazyweb (https://faisalprasetya.github.io/lazyweb/)
+electrolux/index.html Interview pitch for Electrolux (https://faisalprasetya.github.io/electrolux/)
 404.html             Custom not-found page
 css/style.css        Theme (dark/light via CSS variables, toggle persisted in localStorage)
 css/lazyweb.css      Pitch page layout

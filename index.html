@@ -118,6 +118,9 @@
         MLflow, CI/CD) for continuous training, deployment, and monitoring. Proven record leading data
         and MLOps teams, partnering with product and research stakeholders, building RAG and agentic AI
         systems, and diagnosing performance and cost issues in large-scale data and ML infrastructure.
+        Designs RL environments and verifiable tasks for training and evaluating frontier coding agents —
+        sandboxed environments, programmatic graders, reference solutions, and difficulty calibration via
+        agent probing.
         Mentors engineers and delivers from technical design to launch in Python, Go, Rust, and TypeScript.
       </p>
     </div>
@@ -131,6 +134,7 @@
         <div class="skill-card fit-card">
           <h3>Roles I'm suited for</h3>
           <ul class="role-list">
+            <li><strong>RL Environments &amp; Evals Engineer</strong><span>Verifiable task design, graders/reward signals, sandboxed environments, agent probing &amp; difficulty calibration</span></li>
             <li><strong>Staff/Principal AI &amp; ML Platform Engineer</strong><span>End-to-end ML infra: dataset curation, training, evaluation, serving, and monitoring for other product teams</span></li>
             <li><strong>MLOps / ML Platform Engineer</strong><span>Kubeflow, Vertex AI, MLflow, CI/CD for continuous training, deployment &amp; monitoring</span></li>
             <li><strong>AI Engineer - LLM, RAG &amp; Agentic Systems</strong><span>Open-source LLM fine-tuning (LoRA, PEFT, SFT, DPO), vLLM/Triton serving, LangChain, LlamaIndex, Pydantic AI, Qdrant vector search</span></li>
@@ -170,6 +174,15 @@
           <h3>Programming Languages</h3>
           <ul class="tag-list">
             <li>Python</li><li>Go</li><li>TypeScript</li><li>Rust</li><li>SQL</li><li>JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>RL Environments &amp; Agent Evals</h3>
+          <ul class="tag-list">
+            <li>RL Environments</li><li>Task Design</li><li>Graders / Verifiers</li><li>Reward Design</li>
+            <li>Reward Hacking Mitigation</li><li>Agent Evals</li><li>SWE-style Benchmarks</li>
+            <li>Pass@k Analysis</li><li>Docker Sandboxes</li><li>Trajectory Analysis</li>
           </ul>
         </div>
 
@@ -232,6 +245,29 @@
     <div class="wrap">
       <h2><span class="node-dot"></span>Professional Experience</h2>
       <ol class="timeline">
+
+        <li class="timeline-item">
+          <details open>
+            <summary>
+              <span class="role">RL Environments Engineer</span>
+              <span class="company">HUD</span>
+              <span class="dates">2026 - Present</span>
+            </summary>
+            <div class="entry-body">
+              <p class="entry-meta">RL environment &amp; agent evaluation platform · Remote</p>
+              <ul>
+                <li>Designed and shipped RL environments and verifiable tasks for training and evaluating frontier coding agents — from reproducible sandbox setup through grader design, validation, and deployment.</li>
+                <li>Built containerized, deterministic task environments (Docker) pinned to real-world repository snapshots, ensuring hermetic, reproducible rollouts for agentic RL training and evals.</li>
+                <li>Authored task prompts calibrated for unambiguous specification and target difficulty, iterating against prompt–grader misalignment to eliminate reward hacking and specification gaming.</li>
+                <li>Engineered programmatic graders and verifiers (hidden unit tests, weighted rubric checks, blocking criteria) producing reliable reward signals with minimal false positives and false negatives.</li>
+                <li>Authored reference solutions (gold patches / <code>gold.diff</code>) plus negative controls (no-op and lazy/partial solutions) to prove graders reward genuine task completion only.</li>
+                <li>Probed tasks with multiple frontier LLM agents across repeated rollouts, analyzing pass@k, trajectories, and failure modes to tune difficulty into the target pass-rate band.</li>
+                <li>Enforced quality bars before deployment: solvability, grader robustness, contamination/leakage checks, and reviewer QA.</li>
+              </ul>
+              <p class="entry-impact"><strong>Impact:</strong> Finished runner-up on the platform's global task-author leaderboard for accepted, high-quality RL tasks.</p>
+            </div>
+          </details>
+        </li>
 
         <li class="timeline-item">
           <details open>

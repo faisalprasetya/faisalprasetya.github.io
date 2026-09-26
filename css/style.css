@@ -529,6 +529,16 @@ summary .company {
   font-weight: 600;
 }
 
+summary .engagement {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: var(--bg-alt);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  padding: 1px 8px;
+}
+
 summary .dates {
   margin-left: auto;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
